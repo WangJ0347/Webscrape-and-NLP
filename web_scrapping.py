@@ -42,7 +42,7 @@ def best_worst_comps(comp: pandas.DataFrame) -> pandas.DataFrame:
     """
     Analyze best and worst companies based on sentiment index
     :param comp:
-    :return: 2 DataFrames of 10 best and 10 worst companies
+    :return:2 DataFrames of 10 best and 10 worst companies
     """
     sia = SentimentIntensityAnalyzer()
     comp['Sentiment'] = comp['Purpose'].map(lambda x: sia.polarity_scores(x)['compound'])
